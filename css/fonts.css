@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy/Gilroy-Bold.ttf') format('truetype');
+
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy/Gilroy-Medium.ttf') format('truetype');
+
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('../fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf') format('truetype');
+
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('../fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf') format('truetype');
+
+    font-weight: 400;
+    font-style: normal;
+}

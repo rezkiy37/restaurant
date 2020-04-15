@@ -1,0 +1,19 @@
+// main: style.less
+
+.fs (@color, @ff, @fz, @fw) {
+    color:@color;
+    font-family: @ff;
+    font-size: @fz;
+    font-weight: @fw;
+}
+
+.l-fs (@color, @ff, @fz, @fw, @td) {
+    color:@color;
+    font-size: @fz;
+    font-weight: @fw;
+    text-decoration: @td;
+
+    &:focus {
+        outline: none;
+    }
+}

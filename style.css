@@ -1,0 +1,49 @@
+body {
+  max-width: 1920px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  color: #ffdfd1;
+  font-family: Gilroy, Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  background-color: #393939;
+}
+.sprite {
+  display: none;
+}
+.section {
+  max-width: 1920px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+.container {
+  max-width: 1580px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 25px;
+  position: relative;
+}
+.img {
+  max-width: 100%;
+  display: block;
+}
+.svg--contacts {
+  width: 24px;
+  height: 31px;
+  fill: #e13b2b;
+}
+.svg--intro {
+  width: 44px;
+  height: 44px;
+  fill: #ff4d00;
+}
+.header {
+  width: 100%;
+}
