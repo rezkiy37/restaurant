@@ -1,2 +1,128 @@
 // main: ../style.less
 
+.header__nav { 
+    width: 100%;
+    height: auto;
+    
+    margin-top: 60px;
+    margin-right: 5px;
+
+    transition: all .2s ease;
+
+    @media @hd {
+        margin-top: 45px;
+    }
+
+    @media @laptop {
+        margin-top: 30px;
+    }
+
+    @media @medium {
+        width: 100%;
+        height: auto;
+
+        margin-right: 0;
+        margin-top: 0;
+        padding: 20px 15px;
+
+        position: fixed;
+        top: -380px;
+        left: 0;
+        z-index: 1;
+
+        overflow: auto;
+
+        transition: all .3s ease;
+
+        background-color: @gray;
+
+        &.active {
+            top: 60px;
+        }
+    }
+
+    &__link {
+        .l-fs(@fcb, inherit, 20px, 700, none);
+        
+        @media @hd {
+            font-size: 18px;
+        }
+
+        @media @laptop {
+            font-size: 16px;
+        }
+
+        @media @medium {
+            margin-top: 20px;
+
+            font-size: 18px;
+        }
+
+        &--contacts {
+            width: 100%;
+
+            display: none;
+            align-items: center;
+
+            &:hover .svg__block--header {
+                transform: scale(1.1);
+            }
+    
+            &:focus .svg__block--header {
+                animation: link-click .5s ease; 
+                -webkit-animation: link-click .5s ease;
+                -moz-animation: link-click .5s ease;
+                -o-animation: link-click .5s ease;       
+            }
+
+            @media @medium {
+                display: inline-flex;
+            }
+
+            & p {
+                .l-fs(@fcb, inherit, 20px, 700, none);
+        
+                @media @hd {
+                    font-size: 18px;
+                }
+        
+                @media @laptop {
+                    font-size: 16px;
+                } 
+
+                @media @medium {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+}
+.header__list { 
+    width: auto;
+    height: auto;
+
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+
+    @media @medium {
+        flex-wrap: wrap;
+    }
+
+    & li {
+        margin-left: 60px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        @media @medium {
+            width: 100%;
+            height: auto;
+
+            margin: 0;
+            margin-top: 20px;
+        }
+    }
+}

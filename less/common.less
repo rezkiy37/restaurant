@@ -42,6 +42,10 @@ body {
     padding: 0 25px;
 
     position: relative;
+
+    @media @medium {
+        padding: 0 15px;
+    }
 }
 
 .img {
@@ -49,16 +53,108 @@ body {
     display: block;
 }
 
+.svg__block {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    // transition: transform .2s linear;
+
+    &--logo {
+        width: 50px;
+        height: 50px;
+
+        transition: all .2s ease;
+
+        @media @laptop {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &--header {
+        width: 30px;
+        height: 30px;
+
+        margin-right: 40px;
+
+        transition: all .2s ease;
+
+        @media @hd {
+            margin-right: 30px;
+        }
+
+        @media @laptop {
+            width: 25px;
+            height: 25px;
+
+            margin-right: 25px;  
+        }
+    }
+
+    &--basket {
+        @media @laptop {
+            margin-right: 0;
+        }
+    }
+}
+
+.svg--logo {
+    width: auto;
+    height: 100%;
+
+    fill: @red;
+}
+
 .svg--contacts {
-    width: 24px;
-    height: 31px;
+    width: auto;
+    height: 100%;
 
     fill: @red; 
 }
 
 .svg--intro {
-    width: 44px;
-    height: 44px;
+    width: auto;
+    height: 100%;
 
     fill: @orange; 
+}
+
+.link__block {
+    text-decoration: none;
+}
+
+.link__text {
+    .fs (@fcb, inherit, 24px, 500);
+
+    @media @hd {
+        font-size: 20px;
+    }
+
+    @media @laptop {
+        font-size: 18px;
+    }
+}
+
+.no-click {
+    pointer-events: none;
+
+    cursor: not-allowed;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.header-scroll {
+    padding: 10px 0 !important;
+}
+
+.header__nav-scroll {
+    margin-top: 20px !important;
+}
+
+.test__text {
+    padding-top: 60px;
+    min-height: 200vh;
 }
