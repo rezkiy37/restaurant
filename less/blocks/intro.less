@@ -1,0 +1,221 @@
+// main: ../style.less
+
+.intro {
+    padding-top: 190px;
+    padding-bottom: 100px;
+
+    background-color: @black;
+
+    @media @intermediate {
+        padding-top: 110px;
+        padding-bottom: 80px;
+    }
+
+    @media @medium {
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+
+    @media @l {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    &__inner {
+        width: 100%;
+        height: auto;
+
+        margin-top: 110px;
+
+        @media @intermediate {
+            margin-top: 80px;
+        }
+
+        @media @medium {
+            margin-top: 60px;
+        }
+
+        @media @l {
+            margin-top: 50px;
+        }
+
+        @media @m {
+            margin-top: 40px;
+        }
+    }
+
+    &__title {
+        .fs(@white, "Playfair Display", 100px, 700);
+        line-height: .95;
+
+        @media @intermediate {
+            font-size: 70px;
+        }
+
+        @media @medium {
+            font-size: 55px;
+        }
+
+        @media @l {
+            font-size: 37px;
+        }
+
+        @media @m {
+            font-size: 30px;
+        }
+    }
+
+    &__description {
+        margin-top: 55px;
+
+        .fs(@fcb, inherit, 20px, 700);
+
+        @media @intermediate {
+            font-size: 18px;
+        }
+
+        @media @medium {
+            font-size: 16px;
+        }
+
+        @media @l {
+            margin-top: 40px;
+
+            font-size: 14px;
+        }
+
+        @media @m {
+            margin-top: 30px;
+
+            font-size: 12px;
+        }
+    }
+
+    &__content {
+        width: 100%;
+
+        margin-top: 90px;
+
+        display: flex;
+        justify-content: flex-end;
+
+        position: relative;
+
+        @media @intermediate {
+            margin-top: 75px;
+        }
+
+        @media @l {
+            margin-top: 60px;
+        }
+
+        @media @m {
+            margin-top: 45px;
+        }
+
+        &__inner {
+            height: auto;
+
+            padding-right: 20px;
+
+            display: flex;
+            flex-basis: 520px;
+            flex-shrink: 1;
+            flex-wrap: wrap;
+
+            position: relative;
+
+            @media @intermediate {
+                flex-basis: 450px;
+            }
+
+            @media @medium {
+                flex-basis: 350px;
+            }
+
+            @media @l {
+                padding-right: 0;
+
+                flex-basis: auto;
+            }
+        }
+
+        &__text {
+            margin-top: 25px;
+
+            .fs(@fcb, inherit, 20px, 700);
+            
+            z-index: 2;
+
+            @media @intermediate {
+                font-size: 18px;
+            }
+
+            @media @medium {
+                font-size: 16px;
+            }
+
+            @media @l {
+                font-size: 14px;
+            }
+
+            @media @m {
+                font-size: 12px;
+            }
+        }
+
+        &__social {
+            width: auto;
+            height: auto;
+
+            position: absolute;
+            top: 69px;
+            right: -55px;
+            z-index: 3;
+
+            transform: rotate(90deg);
+
+            @media @l {
+                display: none;
+            }
+        }
+
+        &__link {
+            margin-left: 15px;
+
+            .l-fs(@fcb, inherit, 12px, 700, none);
+
+            opacity: .6;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        &__absolute {
+            position: absolute;
+            top: 22px;
+            left: -250px;
+            z-index: 1;
+
+            .fs(@fcb, inherit, 170px, 700);
+            line-height: 0.8;
+            text-transform: uppercase;
+
+            opacity: 0.07;
+
+            @media @medium {
+                left: -220px;
+                font-size: 150px;
+            }
+
+            @media @l {
+                left: -25px;
+            }
+
+            @media @m {
+                font-size: 140px;
+            }
+        }
+    }
+}
