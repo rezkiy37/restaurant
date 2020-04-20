@@ -37,12 +37,24 @@
         background-color: @gray;
 
         &.active {
+            padding-bottom: 100vh;
+            
             top: 60px;
         }
     }
 
     &__link {
         .l-fs(@fcb, inherit, 20px, 700, none);
+
+        transition: color .2s linear;
+
+        &:hover {
+            color: darken(@fcb, 5%);
+        }
+
+        &:active {
+            color: darken(@fcb, 10%);
+        }
         
         @media @hd {
             font-size: 18px;

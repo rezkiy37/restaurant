@@ -51,6 +51,8 @@ body {
 .img {
     max-width: 100%;
     display: block;
+
+    cursor: pointer;
 }
 
 .svg__block {
@@ -97,6 +99,16 @@ body {
             margin-right: 0;
         }
     }
+
+    &--features {
+        width: 45px;
+        height: 45px;
+    }
+
+    &--menu {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .svg--logo {
@@ -118,6 +130,13 @@ body {
     height: 100%;
 
     fill: @orange; 
+}
+
+.svg--menu {
+    width: auto;
+    height: 100%;
+
+    fill: @white;
 }
 
 .link__block {
@@ -197,7 +216,6 @@ body {
         width: 100%;
         height: 100%;
 
-        content: 'ЗАБРОНИРОВАТЬ СТОЛ';
         position: absolute;
         top: 35%;
         left: 0;
@@ -251,9 +269,67 @@ body {
         font-size: 11px;
     }
 
+    &--booking {
+        &:after {
+            content: 'ЗАБРОНИРОВАТЬ СТОЛ';
+        }
+    }
+
+    &--feedback {
+        &:after {
+            content: 'ОСТАВИТЬ ОТЗЫВ';
+        }
+    }
+
+    &--price {
+        &:after {
+            content: '250грн.';
+        }
+    }
+
     &--mini {
+        padding: 0.33em 0.83em;
 
         .fs(@fcb, inherit, 24px, 500);
+
+        @media @laptop {
+            font-size: 22px;
+        }
+
+        @media @medium {
+            font-size: 22px;
+        }
+
+        @media @l {
+            width: auto;
+            
+            font-size: 20px;
+        }
+
+        &:after {
+            width: 100%;
+            height: 100%;
+    
+            position: absolute;
+            top: 16%;
+            left: 0;
+            z-index: 2;
+    
+            .fs(@fcb, inherit, 24px, 500);
+            text-transform: uppercase;
+    
+            border-radius: 2.3em;
+    
+            background-color: transparent;
+
+            @media @laptop {
+                font-size: 22px;
+            }
+
+            @media @l {
+                font-size: 20px;
+            }
+        }
     }
 }
 
@@ -261,8 +337,56 @@ body {
     color: @red;
 }
 
+.section__title {
+    .fs(@white, "Playfair Display", 100px, 700);
+    line-height: .95;
+
+    @media @intermediate {
+        font-size: 70px;
+    }
+
+    @media @medium {
+        font-size: 55px;
+    }
+
+    @media @l {
+        font-size: 37px;
+    }
+
+    @media @m {
+        font-size: 30px;
+    }
+
+    &--darken {
+        color: @fcb;
+    }
+}
+
+.section__text {
+    .fs(@fcb, inherit, 20px, 700);
+    
+    opacity: .6;
+
+    @media @laptop {
+        font-size: 18px;
+    }
+
+    @media @medium {
+        font-size: 16px;
+    }
+
+    @media @l {
+        font-size: 14px;
+    }
+
+    @media @m {
+        font-size: 12px;
+    }
+}
 
 .test__text {
-    padding-top: 60px;
+    padding-top: 250px;
     min-height: 200vh;
+
+    background-color: @red;
 }

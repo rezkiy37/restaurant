@@ -86,7 +86,44 @@ jQuery(document).ready(function () {
         }
     });
 
+    // menu switch
+    // let
+    //     $switcher = $('.menu__nav__link');
+    // $menu = $('.menu__slider');
 
+    // $switcher.on('click', function (event) {
+    //     event.preventDefault();
+
+    //     $switcher.removeClass('menu__nav__link--active');
+    //     $(this).addClass('menu__nav__link--active');
+
+    //     switcher_data = $(this).data('menu');
+
+    //     console.log(switcher_data);
+
+    //     $.each($menu, function () {
+    //         menu_data = $(this).data('menu_slick');
+    //         console.log(menu_data);
+
+    //         this_menu = '[data-menu_slick="{menu_data}"]'.replace('{menu_data}', menu_data);
+    //         console.log(this_menu);
+
+
+    //         if (switcher_data == menu_data) {
+    //             $menu.removeClass('menu__slider--active');
+
+    //             menu_html = $("div{this_menu}".replace('{this_menu}', this_menu));
+
+    //             console.log(menu_html);
+
+
+    //             menu_html.addClass('menu__slider--active');
+
+    //             $('.menu__slider').slick('setPosition');
+    //         }
+    //     });
+
+    // });
 
 
 

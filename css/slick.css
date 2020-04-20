@@ -1,0 +1,39 @@
+.slick-track {
+    display: flex;
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-slide {
+    text-align: center;
+}
+
+.slick-slide:focus {
+    outline: none;
+}
+
+.slick-active:focus {
+    outline: none;
+}
+/* .slick-arrow {
+    display: none;
+} */
+
+/* .slick-arrow:hover {
+    cursor: pointer;
+}
+
+.slick-arrow:focus {
+    outline: 0;
+}
+
+.slick-prev {
+
+}
+
+.slick-next {
+
+} */
+
