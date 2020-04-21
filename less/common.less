@@ -60,7 +60,9 @@ body {
     align-items: center;
     justify-content: center;
 
-    // transition: transform .2s linear;
+    &:hover {
+        cursor: pointer;
+    }
 
     &--logo {
         width: 50px;
@@ -270,12 +272,21 @@ body {
     }
 
     &--booking {
+        &:before {
+            animation: btn-pulse 2s ease-out;
+            animation-iteration-count: infinite;
+        }  
+
         &:after {
             content: 'ЗАБРОНИРОВАТЬ СТОЛ';
         }
     }
 
     &--feedback {
+        animation: abtn-pulse 2s ease-out;
+        animation-iteration-count: infinite;
+        opacity: 1;
+
         &:after {
             content: 'ОСТАВИТЬ ОТЗЫВ';
         }

@@ -86,10 +86,42 @@ jQuery(document).ready(function () {
         }
     });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // menu switch
     // let
     //     $switcher = $('.menu__nav__link');
-    // $menu = $('.menu__slider');
+    // $menu_item = $('.menu__item');
 
     // $switcher.on('click', function (event) {
     //     event.preventDefault();
@@ -101,23 +133,23 @@ jQuery(document).ready(function () {
 
     //     console.log(switcher_data);
 
-    //     $.each($menu, function () {
-    //         menu_data = $(this).data('menu_slick');
-    //         console.log(menu_data);
+    //     $.each($menu_item, function () {
+    //         menu_item_data = $(this).data('menu_slick');
+    //         console.log(menu_item_data);
 
-    //         this_menu = '[data-menu_slick="{menu_data}"]'.replace('{menu_data}', menu_data);
-    //         console.log(this_menu);
-
-
-    //         if (switcher_data == menu_data) {
-    //             $menu.removeClass('menu__slider--active');
-
-    //             menu_html = $("div{this_menu}".replace('{this_menu}', this_menu));
-
-    //             console.log(menu_html);
+    //         this_menu_item = '[data-menu_slick="{menu_item_data}"]'.replace('{menu_item_data}', menu_item_data);
+    //         console.log(menu_item_data);
 
 
-    //             menu_html.addClass('menu__slider--active');
+    //         if (switcher_data == menu_item_data) {
+    //             $menu_item.removeClass('menu__item--active');
+
+    //             menu_item_html = $("div{this_menu_item}".replace('{this_menu_item}', this_menu_item));
+
+    //             console.log(menu_item_html);
+
+
+    //             menu_item_html.addClass('menu__item--active');
 
     //             $('.menu__slider').slick('setPosition');
     //         }

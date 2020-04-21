@@ -59,6 +59,10 @@
         &__link {
             margin-top: 45px;
 
+            position: relative;
+
+            left: 0;
+
             .fs(@fcb, "Playfair Display", 40px, 400);
 
             &:first-child {
@@ -66,6 +70,25 @@
             }
 
             transition: all .3s ease;
+
+            &:before {
+                width: 0;
+                height: 0;
+
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -100px;
+                z-index: 1;
+
+                background-color: transparent;
+
+                transition: all .5s ease;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
 
             @media @l {
                 margin-top: 30px;
@@ -140,18 +163,20 @@
 
         background-color: @orange;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         @media (max-width: 1100px) {
             margin-top: 0;
         }
 
         @media @l {
-            height: 345px;
+            height: 150px;
 
-            flex-basis: 200px;
-        }
+            flex-basis: 150px;
 
-        @media @m {
-            flex-basis: 160px;
+            border-radius: 50%;
         }
 
         &__title {
@@ -177,11 +202,7 @@
             }
             
             @media @l {
-                font-size: 110px;
-            }
-
-            @media @m {
-                font-size: 90px;
+                font-size: 55px;
             }
         }
 
@@ -203,21 +224,13 @@
 
             @media @l {
                 font-size: 10px;
-            }
-
-            @media @m {
-                font-size: 8px;
+                line-height: 1.2;
             }
         }
         
     }
 
     &__slider {
-        display: none;
-
-        &--active {
-            display: block;
-        }
 
         &--wrapper {
             flex-basis: 1140px;
@@ -241,7 +254,7 @@
 
             position: absolute;
             top: 10px;
-            z-index: 1;   
+            z-index: 2;   
             
             color: transparent;
             font-size: 0;
@@ -357,14 +370,20 @@
             margin-top: 75px;
 
             @media @l {
-                margin-top: 40px;
+                margin-top: 40px !important;
             }
+        }
+
+        
+        &--active {
+            display: block !important;
         }
 
         @media @l {
             width: 300px !important;
             height: 400px;
 
+            margin: 0 auto;
             padding-top: 215px;
             padding-left: 15px;
         }

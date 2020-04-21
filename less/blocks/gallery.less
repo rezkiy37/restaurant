@@ -1,0 +1,327 @@
+// main: ../style.less
+
+.gallery { 
+    padding: 150px 0;
+
+    overflow: hidden;
+
+    background-color: @black;
+
+    &__bg {
+        width: 100%;
+        height: auto;
+
+        position: relative;
+
+        background-color: @gray;
+    }
+
+    &__inner {
+        width: 100%;
+
+        padding-top: 50px;
+        padding-bottom: 130px;
+
+        @media @laptop {
+            padding-bottom: 90px;
+        }
+        
+        @media @tablet {
+            padding-top: 0;
+            padding-bottom: 60px;
+        }
+
+        @media @l {
+            padding-bottom: 45px;
+        }
+
+        & .slick-arrow {
+            width: 30px;
+            height: 22px;
+
+            position: absolute;
+            top: 50%;
+            z-index: 2;   
+            
+            color: transparent;
+            font-size: 0;
+
+            border: 0;
+
+            background-color: transparent;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            transition: all .2s ease;
+
+            &:hover {
+                cursor: pointer;
+
+                transform: scale(1.2);
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        & .slick-prev {
+            left: -20px;
+
+            background-image: url('img/menu/prev.png');
+        }
+
+        & .slick-next {
+            right: -20px;
+
+            background-image: url('img/menu/next.png');
+        }
+
+        &--wrapper {
+            width: 100%;
+
+            margin-top: 130px;
+            margin-bottom: 70px;
+        }
+    }
+
+    &__absolute {
+        width: 5000px;
+        height: 150px;
+
+        position: absolute;  
+        left: 0;
+        z-index: 1;
+
+        background-repeat: repeat-x;
+
+        &--top {
+            top: -150px;
+
+            background-image: url('img/about/above.png');
+        }
+
+        &--bottom {
+            bottom: -150px;
+
+            background-image: url('img/about/below.png');
+        }
+    }
+
+    &__slider {
+        width: 100%;
+        display: flex;
+
+        overflow: hidden;
+
+        position: relative;
+
+        &--wrapper {
+            width: 100%;
+
+            margin-top: 130px;
+
+            @media @laptop {
+                margin-top: 100px;
+            }
+
+            @media @l {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    &__item {
+        width: 25%;
+
+        height: 520px;
+
+        padding-bottom: 35px;
+        padding-left: 30px;
+
+        display: flex;
+
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        position: relative;
+
+        @media @hd {
+            width: 33.3333%;
+        }
+
+        &--hight {
+            margin-top: 0;
+        }
+
+        &--middle {
+            margin-top: 100px;
+
+            @media @hd {
+                margin-top: 75px;
+            }
+
+            @media @tablet {
+                margin-top: 50px;
+            }
+
+            @media @l {
+                margin-top: 0;
+            }
+        }
+
+        &--low {
+            margin-top: 200px;
+
+            @media @hd {
+                margin-top: 150px;
+            }
+
+            @media @tablet {
+                margin-top: 100px;
+            }
+
+            @media @l {
+                margin-top: 0;
+            }
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        &__content {
+            z-index: 2;
+        }
+
+        &__title {
+            margin-bottom: 30px;
+
+            .fs(@white, inherit, 30px, 500);
+        }
+
+        &__description {
+            max-width: 270px;
+
+            .fs(@fcb, inherit, 16px, 500);
+        }
+    }
+
+    &__controle {
+        width: 100%;
+        margin-top: 50px;
+
+        position: relative;
+
+        @media @laptop {
+            margin-top: 30px;
+        }
+
+        & .slick-arrow {
+            width: 30px;
+            height: 22px;
+
+            position: absolute;
+            top: 10px;
+            z-index: 2;   
+            
+            color: transparent;
+            font-size: 0;
+
+            border: 0;
+
+            background-color: transparent;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            transition: all .2s ease;
+
+            &:hover {
+                cursor: pointer;
+
+                transform: scale(1.2);
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        & .slick-prev {
+            left: 0;
+
+            background-image: url('img/menu/prev.png');
+        }
+
+        & .slick-next {
+            right: 0;
+
+            background-image: url('img/menu/next.png');
+        }
+
+        & .slick-dots {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: 1;
+
+            display: flex;
+            justify-content: center;
+            
+            transform: translateX(-50%);
+
+            & li button {
+                width: 15px;
+                height: 15px;
+
+                margin: 0 10px;
+
+                color: transparent;
+                font-size: 0;
+
+                border: 0;
+                border-radius: 50%;
+
+                opacity: .6;
+
+                background-color: @red;
+
+                transition: all .3s ease;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    transform: scale(1.2);
+                }
+
+                @media @l {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+
+            & .slick-active button {
+                width: 20px;
+                height: 20px;
+
+                opacity: 1;
+
+                @media @l {
+                    width: 18px;
+                    height: 18px;
+                }           
+            }
+        }
+    }
+
+}
