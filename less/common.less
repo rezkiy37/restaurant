@@ -31,6 +31,15 @@ body {
     padding: 0;
 
     position: relative;
+
+    &__bg {
+        width: 100%;
+        height: auto;
+
+        position: relative;
+
+        background-color: @gray;
+    }
 }
 
 .container {
@@ -283,9 +292,10 @@ body {
     }
 
     &--feedback {
-        animation: abtn-pulse 2s ease-out;
-        animation-iteration-count: infinite;
-        opacity: 1;
+        &:before {
+            animation: btn-pulse 2s ease-out;
+            animation-iteration-count: infinite;
+        } 
 
         &:after {
             content: 'ОСТАВИТЬ ОТЗЫВ';
@@ -397,7 +407,7 @@ body {
 
 .test__text {
     padding-top: 250px;
-    min-height: 200vh;
+    min-height: 20vh;
 
     background-color: @red;
 }

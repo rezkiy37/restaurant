@@ -7,15 +7,6 @@
 
     background-color: @black;
 
-    &__bg {
-        width: 100%;
-        height: auto;
-
-        position: relative;
-
-        background-color: @gray;
-    }
-
     &__inner {
         width: 100%;
 
@@ -77,11 +68,13 @@
             background-image: url('img/menu/next.png');
         }
 
-        &--wrapper {
+        &__wrapper {
             width: 100%;
 
             margin-top: 130px;
             margin-bottom: 70px;
+
+            position: relative;
         }
     }
 
@@ -116,7 +109,11 @@
 
         position: relative;
 
-        &--wrapper {
+        &:hover {
+            cursor: pointer;
+        }
+
+        &__wrapper {
             width: 100%;
 
             margin-top: 130px;

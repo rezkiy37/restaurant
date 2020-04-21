@@ -1,8 +1,257 @@
 // main: ../style.less
 
 .feedback {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background-color: @black;
+
+    @media @tablet {
+        padding-top: 0;
+    }
 
     &__inner {
         
+    }
+
+    &__slider {
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &__wrapper {
+            margin-top: 140px;
+            margin-bottom: 60px;
+
+            position: relative;
+
+            @media @laptop {
+                margin-top: 100px;
+            }
+
+            @media @l {
+                margin-top: 40px;
+                margin-bottom: 50px;
+            }
+            
+            & .slick-arrow {
+                width: 30px;
+                height: 22px;
+    
+                position: absolute;
+                top: 50%;
+                z-index: 2;   
+                
+                color: transparent;
+                font-size: 0;
+    
+                border: 0;
+    
+                background-color: transparent;
+                background-size: cover;
+                background-repeat: no-repeat;
+    
+                transition: all .2s ease;
+    
+                &:hover {
+                    cursor: pointer;
+    
+                    transform: scale(1.2);
+                }
+    
+                &:focus {
+                    outline: none;
+                }
+            }
+    
+            & .slick-prev {
+                left: -45px;
+    
+                background-image: url('img/menu/prev.png');
+            }
+    
+            & .slick-next {
+                right: -20px;
+    
+                background-image: url('img/menu/next.png');
+            }
+        }
+    }
+
+    &__item {
+        width: 33.3333%;
+
+        padding-right: 30px;
+        padding-left: 2px;
+
+        @media @laptop {
+            width: 50%;
+        }
+
+        @media @tablet {
+            padding-right: 15px;
+        }
+
+        &__content {
+            width: 100%;
+
+            padding: 40px 10px 50px 50px;
+
+            border-radius: 2.3em;
+
+            background-color: @white;
+
+            @media @large {
+                padding: 30px 10px 40px 30px;
+            }
+
+            @media @tablet {
+                padding: 25px 10px 30px 25px;
+            }
+        }
+
+        &__date {
+            .fs(@orange, inherit, 18px, 500);
+
+            @media @tablet {
+                font-size: 16px;
+            }
+        }
+
+        &__title {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            
+            .fs(@orange, inherit, 30px, 500);
+            line-height: 0.8;
+
+            @media @tablet {
+                font-size: 26px;
+            }
+        }
+
+        &__text {
+            max-width: 328px;
+
+            .fs(@gray, inherit, 18px, 500);
+
+            @media @tablet {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__controle {
+        width: 100%;
+        height: 50px;
+
+        margin-top: 60px;
+
+        position: relative;
+
+        @media @l {
+            margin-top: 45px;
+        }
+
+        & .slick-arrow {
+            width: 30px;
+            height: 22px;
+
+            position: absolute;
+            top: 10px;
+            z-index: 2;   
+            
+            color: transparent;
+            font-size: 0;
+
+            border: 0;
+
+            background-color: transparent;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            transition: all .2s ease;
+
+            &:hover {
+                cursor: pointer;
+
+                transform: scale(1.2);
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        & .slick-prev {
+            left: 0;
+
+            background-image: url('img/menu/prev.png');
+        }
+
+        & .slick-next {
+            right: 0;
+
+            background-image: url('img/menu/next.png');
+        }
+
+        & .slick-dots {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: 1;
+
+            display: flex;
+            justify-content: center;
+            
+            transform: translateX(-50%);
+
+            & li button {
+                width: 15px;
+                height: 15px;
+
+                margin: 0 10px;
+
+                color: transparent;
+                font-size: 0;
+
+                border: 0;
+                border-radius: 50%;
+
+                opacity: .6;
+
+                background-color: @red;
+
+                transition: all .3s ease;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    transform: scale(1.2);
+                }
+
+                @media @l {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+
+            & .slick-active button {
+                width: 20px;
+                height: 20px;
+
+                opacity: 1;
+
+                @media @l {
+                    width: 18px;
+                    height: 18px;
+                }           
+            }
+        }
     }
 }

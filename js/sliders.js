@@ -55,6 +55,13 @@ jQuery(document).ready(function () {
 
         responsive: [
             {
+                breakpoint: 1650,
+                settings: {
+                    appendArrows: $('.gallery__controle'),
+                }
+            },
+
+            {
                 breakpoint: 1280,
                 settings: {
 
@@ -81,8 +88,47 @@ jQuery(document).ready(function () {
             },
         ],
 
-        appendArrows: $('.gallery__controle'),
+        appendArrows: $('.gallery__slider__wrapper'),
         appendDots: '.gallery__controle',
+    });
+
+    $('.feedback__slider').slick({
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+
+        responsive: [
+            {
+                breakpoint: 1650,
+                settings: {
+                    appendArrows: $('.feedback__controle'),
+                }
+            },
+
+            {
+                breakpoint: 1025,
+                settings: {
+
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    appendArrows: $('.feedback__controle'),
+                }
+            },
+
+            {
+                breakpoint: 426,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    appendArrows: $('.feedback__controle'),
+                }
+            },
+        ],
+
+        appendArrows: $('.feedback__slider__wrapper'),
+        appendDots: '.feedback__controle',
     });
 
 

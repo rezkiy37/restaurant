@@ -86,6 +86,18 @@ jQuery(document).ready(function () {
         }
     });
 
+    // menu switch
+    let
+        $switcher = $('.menu__nav__link');
+    $menu_item = $('.menu__item');
+
+    $switcher.on('click', function (event) {
+        event.preventDefault();
+
+        $switcher.removeClass('menu__nav__link--active');
+        $(this).addClass('menu__nav__link--active');
+    });
+
 
 
 

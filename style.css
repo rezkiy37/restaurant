@@ -72,6 +72,12 @@ body {
   padding: 0;
   position: relative;
 }
+.section__bg {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: #32302f;
+}
 .container {
   max-width: 1580px;
   width: 100%;
@@ -288,10 +294,9 @@ body {
 .btn--booking:after {
   content: 'ЗАБРОНИРОВАТЬ СТОЛ';
 }
-.btn--feedback {
-  animation: abtn-pulse 2s ease-out;
+.btn--feedback:before {
+  animation: btn-pulse 2s ease-out;
   animation-iteration-count: infinite;
-  opacity: 1;
 }
 .btn--feedback:after {
   content: 'ОСТАВИТЬ ОТЗЫВ';
@@ -409,7 +414,7 @@ body {
 }
 .test__text {
   padding-top: 250px;
-  min-height: 200vh;
+  min-height: 20vh;
   background-color: #e13b2b;
 }
 @-webkit-keyframes link-click {
@@ -1022,12 +1027,6 @@ body {
   overflow: hidden;
   background-color: #151314;
 }
-.about__bg {
-  width: 100%;
-  height: auto;
-  position: relative;
-  background-color: #32302f;
-}
 .about__inner {
   width: 100%;
   height: auto;
@@ -1269,8 +1268,14 @@ body {
   background-image: url('img/about/below.png');
 }
 .menu {
+  padding-top: 50px;
   padding-bottom: 50px;
   background-color: #151314;
+}
+@media (max-width: 768px) {
+  .menu {
+    padding-top: 0;
+  }
 }
 .menu__inner {
   width: 100%;
@@ -1478,7 +1483,10 @@ body {
     line-height: 1.2;
   }
 }
-.menu__slider--wrapper {
+.menu__slider:hover {
+  cursor: pointer;
+}
+.menu__slider__wrapper {
   flex-basis: 1140px;
   overflow: hidden;
 }
@@ -1673,12 +1681,6 @@ body {
   overflow: hidden;
   background-color: #151314;
 }
-.gallery__bg {
-  width: 100%;
-  height: auto;
-  position: relative;
-  background-color: #32302f;
-}
 .gallery__inner {
   width: 100%;
   padding-top: 50px;
@@ -1729,10 +1731,11 @@ body {
   right: -20px;
   background-image: url('img/menu/next.png');
 }
-.gallery__inner--wrapper {
+.gallery__inner__wrapper {
   width: 100%;
   margin-top: 130px;
   margin-bottom: 70px;
+  position: relative;
 }
 .gallery__absolute {
   width: 5000px;
@@ -1756,17 +1759,20 @@ body {
   overflow: hidden;
   position: relative;
 }
-.gallery__slider--wrapper {
+.gallery__slider:hover {
+  cursor: pointer;
+}
+.gallery__slider__wrapper {
   width: 100%;
   margin-top: 130px;
 }
 @media (max-width: 1024px) {
-  .gallery__slider--wrapper {
+  .gallery__slider__wrapper {
     margin-top: 100px;
   }
 }
 @media (max-width: 425px) {
-  .gallery__slider--wrapper {
+  .gallery__slider__wrapper {
     margin-top: 40px;
   }
 }
@@ -1929,6 +1935,217 @@ body {
 }
 @media (max-width: 425px) {
   .gallery__controle .slick-dots .slick-active button {
+    width: 18px;
+    height: 18px;
+  }
+}
+.feedback {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #151314;
+}
+@media (max-width: 768px) {
+  .feedback {
+    padding-top: 0;
+  }
+}
+.feedback__slider:hover {
+  cursor: pointer;
+}
+.feedback__slider__wrapper {
+  margin-top: 140px;
+  margin-bottom: 60px;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .feedback__slider__wrapper {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 425px) {
+  .feedback__slider__wrapper {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+}
+.feedback__slider__wrapper .slick-arrow {
+  width: 30px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  color: transparent;
+  font-size: 0;
+  border: 0;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease;
+}
+.feedback__slider__wrapper .slick-arrow:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.feedback__slider__wrapper .slick-arrow:focus {
+  outline: none;
+}
+.feedback__slider__wrapper .slick-prev {
+  left: -45px;
+  background-image: url('img/menu/prev.png');
+}
+.feedback__slider__wrapper .slick-next {
+  right: -20px;
+  background-image: url('img/menu/next.png');
+}
+.feedback__item {
+  width: 33.3333%;
+  padding-right: 30px;
+  padding-left: 2px;
+}
+@media (max-width: 1024px) {
+  .feedback__item {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .feedback__item {
+    padding-right: 15px;
+  }
+}
+.feedback__item__content {
+  width: 100%;
+  padding: 40px 10px 50px 50px;
+  border-radius: 2.3em;
+  background-color: #FFFFFF;
+}
+@media (max-width: 1440px) {
+  .feedback__item__content {
+    padding: 30px 10px 40px 30px;
+  }
+}
+@media (max-width: 768px) {
+  .feedback__item__content {
+    padding: 25px 10px 30px 25px;
+  }
+}
+.feedback__item__date {
+  color: #ff4d00;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .feedback__item__date {
+    font-size: 16px;
+  }
+}
+.feedback__item__title {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #ff4d00;
+  font-family: inherit;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 0.8;
+}
+@media (max-width: 768px) {
+  .feedback__item__title {
+    font-size: 26px;
+  }
+}
+.feedback__item__text {
+  max-width: 328px;
+  color: #32302f;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .feedback__item__text {
+    font-size: 16px;
+  }
+}
+.feedback__controle {
+  width: 100%;
+  height: 50px;
+  margin-top: 60px;
+  position: relative;
+}
+@media (max-width: 425px) {
+  .feedback__controle {
+    margin-top: 45px;
+  }
+}
+.feedback__controle .slick-arrow {
+  width: 30px;
+  height: 22px;
+  position: absolute;
+  top: 10px;
+  z-index: 2;
+  color: transparent;
+  font-size: 0;
+  border: 0;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease;
+}
+.feedback__controle .slick-arrow:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.feedback__controle .slick-arrow:focus {
+  outline: none;
+}
+.feedback__controle .slick-prev {
+  left: 0;
+  background-image: url('img/menu/prev.png');
+}
+.feedback__controle .slick-next {
+  right: 0;
+  background-image: url('img/menu/next.png');
+}
+.feedback__controle .slick-dots {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  transform: translateX(-50%);
+}
+.feedback__controle .slick-dots li button {
+  width: 15px;
+  height: 15px;
+  margin: 0 10px;
+  color: transparent;
+  font-size: 0;
+  border: 0;
+  border-radius: 50%;
+  opacity: 0.6;
+  background-color: #e13b2b;
+  transition: all 0.3s ease;
+}
+.feedback__controle .slick-dots li button:focus {
+  outline: none;
+}
+.feedback__controle .slick-dots li button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+@media (max-width: 425px) {
+  .feedback__controle .slick-dots li button {
+    width: 12px;
+    height: 12px;
+  }
+}
+.feedback__controle .slick-dots .slick-active button {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+}
+@media (max-width: 425px) {
+  .feedback__controle .slick-dots .slick-active button {
     width: 18px;
     height: 18px;
   }
