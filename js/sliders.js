@@ -16,7 +16,7 @@ jQuery(document).ready(function () {
         arrows: false,
     });
 
-    $('.menu__slider').slick({
+    $('.menu__slider--1').slick({
         infinite: false,
         rows: 2,
         slidesToShow: 3,
@@ -42,8 +42,128 @@ jQuery(document).ready(function () {
             },
         ],
 
-        appendArrows: $('.menu__controle'),
-        appendDots: '.menu__controle',
+        appendArrows: $('#controle_1'),
+        appendDots: '#controle_1',
+    });
+
+    $('.menu__slider--2').slick({
+        infinite: false,
+        rows: 2,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: true,
+        dots: true,
+
+        responsive: [
+            {
+                breakpoint: 1600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+
+            {
+                breakpoint: 815,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ],
+
+        appendArrows: $('#controle_2'),
+        appendDots: '#controle_2',
+    });
+
+    $('.menu__slider--3').slick({
+        infinite: false,
+        rows: 2,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: true,
+        dots: true,
+
+        responsive: [
+            {
+                breakpoint: 1600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+
+            {
+                breakpoint: 815,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ],
+
+        appendArrows: $('#controle_3'),
+        appendDots: '#controle_3',
+    });
+
+    $('.menu__slider--4').slick({
+        infinite: false,
+        rows: 2,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: true,
+        dots: true,
+
+        responsive: [
+            {
+                breakpoint: 1600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+
+            {
+                breakpoint: 815,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ],
+
+        appendArrows: $('#controle_4'),
+        appendDots: '#controle_4',
+    });
+
+    $('.menu__slider--5').slick({
+        infinite: false,
+        rows: 2,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: true,
+        dots: true,
+
+        responsive: [
+            {
+                breakpoint: 1600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+
+            {
+                breakpoint: 815,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ],
+
+        appendArrows: $('#controle_5'),
+        appendDots: '#controle_5',
     });
 
     $('.gallery__slider').slick({
@@ -130,6 +250,5 @@ jQuery(document).ready(function () {
         appendArrows: $('.feedback__slider__wrapper'),
         appendDots: '.feedback__controle',
     });
-
 
 });

@@ -86,7 +86,7 @@ jQuery(document).ready(function () {
         }
     });
 
-    // menu switch
+    // menu switcher class
     let
         $switcher = $('.menu__nav__link');
     $menu_item = $('.menu__item');
@@ -96,6 +96,7 @@ jQuery(document).ready(function () {
 
         $switcher.removeClass('menu__nav__link--active');
         $(this).addClass('menu__nav__link--active');
+
     });
 
 

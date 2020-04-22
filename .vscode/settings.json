@@ -1,4 +1,5 @@
 {
     "files.autoSaveDelay": 1e+22,
-    "files.autoSave": "onFocusChange"
+    "files.autoSave": "onFocusChange",
+    "liveServer.settings.port": 5501
 }
