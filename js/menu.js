@@ -3,12 +3,16 @@ window.onload = () => {
 
     let
         menu = document.getElementsByClassName('menu__slider');
+    //menu_first = document.querySelector('.menu__slider');
     controle = document.getElementsByClassName('menu__controle');
+    //controle_first = document.querySelector('.menu__controle');
+
 
     console.log(menu);
 
-    for (let i = 1; i < menu.length; i++) {
-        if (menu[i] == 0) {
+    for (let i = 0; i < menu.length; i++) {
+
+        if (i == 0) {
             menu[i].style.display = 'block';
             controle[i].style.display = 'block';
         }
@@ -17,6 +21,14 @@ window.onload = () => {
             controle[i].style.display = 'none';
         }
     }
+
+    // for (let i = 0; i < menu.length; i++) {
+    //     menu[i].style.display = 'none';
+    //     controle[i].style.display = 'none';
+    // }
+
+    // menu_first.style.display = 'block';
+    // controle_first.style.display = 'block';
 
 
     document.querySelector('.menu__nav').addEventListener('click', linkClick);

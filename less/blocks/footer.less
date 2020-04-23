@@ -1,0 +1,224 @@
+// main: ../style.less
+
+.footer {
+    padding: 150px 0;
+    padding-bottom: 0;
+
+    overflow: hidden;
+
+    background-color: #151314;
+
+    &__inner {
+        padding-top: 190px;
+        padding-bottom: 180px;
+
+        @media @hd {
+            padding-top: 50px;
+        }
+
+        @media @tablet {
+            padding-bottom: 120px;
+        }
+
+        @media @l {
+            padding-bottom: 80px;
+        }
+    }
+
+    &__form {
+        width: 100%;
+
+        padding: 85px 30px;
+
+        display: flex;
+        flex: 0 1 766px;
+        flex-wrap: wrap;
+
+        border-radius: 2.3em;
+
+        background-color: @black;
+
+        @media @l {
+            padding: 50px 15px;
+        }
+
+        &__wrapper {
+            max-width: 766px;
+            width: 100%;
+
+            display: flex;
+        }
+
+        &__line {
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+
+            @media @l {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            &:first-child input {
+                max-width: 50%;
+
+                flex: 0 1 340px;
+
+                &:first-child {
+                    margin-right: 10px;
+
+                    @media @l {
+                        margin-right: 0;
+                    }
+                }
+
+                @media @l {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+
+            &:nth-child(2) input {
+                max-width: 33.333%;
+
+                flex: 0 1 215px;
+
+                @media @l {
+                    max-width: 50%;
+                    width: 50%;
+                }
+
+                &:nth-child(-n+2) {
+                    margin-right: 10px;
+
+                    @media @l {
+                        margin-right: 0;
+                    }
+                }
+
+                &:first-child {
+                    @media @l {
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+
+        &__input {
+            height: 90px;
+
+            margin-bottom: 30px;
+            padding-left: 30px;
+
+            .fs(@fcb, inherit, 16px, 700);
+            text-align: left;
+
+            border: 0;
+            border-radius: 2.3em;
+
+            background-color: @gray;
+
+            &:focus {
+                outline: 0;
+            }
+
+            &::placeholder {
+                color: @fcb;
+            }
+
+            @media @l {
+                height: 75px;
+
+                margin-bottom: 20px;
+                padding-left: 20px;
+
+                font-size: 14px;
+            }
+
+            &__wrapper {
+                display: none;
+
+                @media @l {
+                    width: 100%;
+
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: nowrap;
+
+                    & input:first-child {
+                        margin-right: 10px !important;
+                    }
+                }
+            }
+
+            &[type="number"] {
+                padding-left: 100px;
+
+                color: #000;
+
+                position: relative;
+
+                &:before {
+                    width: 100%;
+                    height: 100%;
+
+                    content: 'Гостей';
+
+                    .fs(@fcb, inherit, 16px, 700);
+                    text-align: left;
+                    
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+
+                    background-color: #fff;
+                }
+            }
+
+            &[type="date"],
+            &[type="time"] {
+                padding-right: 15px;
+
+                text-align: center;
+            }
+
+            &[type="date"]::-webkit-inner-spin-button {
+                display: none;
+                -webkit-appearance: none;
+            }
+
+            &[type="time"]::-webkit-inner-spin-button {
+                display: none;
+                -webkit-appearance: none;
+            }
+
+            &.btn {
+                height: auto;
+
+                margin-bottom: 0;
+                padding: 1.5em 6em !important;
+
+                flex: 0 1 338px;
+
+                color: @white;
+                font-size: 14px;
+                text-align: center;
+
+                background-color: @orange;
+
+                animation: btn-pulse 2s ease-out;
+                animation-iteration-count: infinite;
+
+                @media @l {
+                    padding: 1.5em 5em !important;
+
+                    font-size: 12px;
+                }
+            }
+        }   
+    }
+}

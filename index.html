@@ -463,7 +463,7 @@
 					<div class="about__content">
 
 						<div class="about__text">
-							<h2 class="section__title">О нас</h2>
+							<h2 class="section__title section__title--darken">О нас</h2>
 
 							<p class="section__text">
 								Волшебная атмосфера, безукоризненное обслуживание,
@@ -497,7 +497,7 @@
 								<div class="about__slider__content">
 									<h4 class="about__slider__title">Испанская утка</h4>
 									<p class="about__slider__weight">350г.</p>
-									<button class="btn btn--mini btn--price">250грн.</button>
+									<button class="btn btn--mini btn--price"><span>250грн.</span></button>
 								</div>
 
 								<img data-lazy="img/about/dish.png" alt="Dish" class="img">
@@ -509,7 +509,7 @@
 								<div class="about__slider__content">
 									<h4 class="about__slider__title">Испанская утка</h4>
 									<p class="about__slider__weight">350г.</p>
-									<button class="btn btn--mini btn--price">250грн.</button>
+									<button class="btn btn--mini btn--price"><span>200грн.</span></button>
 								</div>
 
 								<img data-lazy="img/about/fish.png" alt="Dish" class="img">
@@ -600,18 +600,14 @@
 			<!--/.container-->
 
 
-			<div class="about__absolute about__absolute--top">
-				<!-- <img src="img/about/above.png" alt="Wave" class="about__cover img"> -->
-			</div>
-			<!--/.about__absolute-->
+			<div class="section__absolute section__absolute--top"></div>
+			<!--/.section__absolute-->
 
-			<div class="about__absolute about__absolute--bottom">
-				<!-- <img src="img/about/below.png" alt="Wave" class="about__cover img"> -->
-			</div>
-			<!--/.about__absolute-->
+			<div class="section__absolute section__absolute--bottom"></div>
+			<!--/.section__absolute-->
 
 		</div>
-		<!--/.about__bg-->
+		<!--/.section__bg-->
 
 	</section>
 
@@ -1544,7 +1540,7 @@
 			<div class="container">
 				<div class="gallery__inner">
 
-					<h2 class="section__title">Фотогалерея</h2>
+					<h2 class="section__title section__title--darken">Фотогалерея</h2>
 
 					<div class="gallery__slider__wrapper">
 						<div class="gallery__slider">
@@ -1674,18 +1670,14 @@
 			</div>
 			<!--/.cantainer-->
 
-			<div class="gallery__absolute gallery__absolute--top">
-				<!-- <img src="img/about/above.png" alt="Wave" class="about__cover img"> -->
-			</div>
-			<!--/.gallery__absolute-->
+			<div class="section__absolute section__absolute--top"></div>
+			<!--/.section__absolute-->
 
-			<div class="gallery__absolute gallery__absolute--bottom">
-				<!-- <img src="img/about/below.png" alt="Wave" class="about__cover img"> -->
-			</div>
-			<!--/.gallery__absolute-->
+			<div class="section__absolute section__absolute--bottom"></div>
+			<!--/.section__absolute-->
 
 		</div>
-		<!--/.gallery__bg-->
+		<!--/.section__bg-->
 	</section>
 
 	<!-- Feedback -->
@@ -1822,13 +1814,134 @@
 		<!--/.container-->
 	</section>
 
-	<!-- Lorem text -->
-	<p class="test__text section">
-		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, accusantium maiores ducimus ipsum impedit
-		consequatur dolores repellendus aliquid repellat animi hic dignissimos error numquam nisi cum placeat ex
-		adipisci doloribus mollitia dolorem, perspiciatis quasi excepturi? Distinctio earum cupiditate omnis asperiores
-	</p>
+	<!-- Contacts -->
+	<footer class="footer section" id="footer">
+		<div class="section__bg">
+			<div class="container">
+				<div class="footer__inner">
 
+					<div class="footer__form__wrapper">
+						<form action="" class="footer__form">
+
+							<div class="footer__form__line">
+								<input type="text" class="footer__form__input" placeholder="Имя">
+								<input type="tel" class="footer__form__input" placeholder="Телефон">
+							</div>
+
+							<div class="footer__form__line">
+								<input type="number" class="footer__form__input" placeholder="1">
+								<input type="date" class="footer__form__input footer__form__input--wrap"
+									placeholder="Дата">
+								<input type="time" class="footer__form__input footer__form__input--wrap"
+									placeholder="Время">
+							</div>
+
+							<input type="submit" class="footer__form__input footer__form__input btn btn--booking"
+								value="забронировать стол">
+						</form>
+					</div>
+
+					<div class="contacts">
+
+						<div class="contacts__inner">
+
+							<div class="contacts__content">
+
+								<h2 class="section__title section__title--darken">Контакты</h2>
+
+								<div class="contacts__link">
+									Телефон <br>
+
+									<a href="tel:+380 (67) 562 51 96" class="contacts__link__link link__block">
+										<div class="svg__block svg__block--header">
+											<svg class="svg--contacts">
+												<use xlink:href="#tel"></use>
+											</svg>
+										</div>
+
+										<p class="link__text">+380 (67) 562 51 96</p>
+									</a>
+
+								</div>
+
+								<div class="contacts__link">
+									Адрес <br>
+
+									<a href="#" class="link__block contacts__link__link">
+										<div class="svg__block svg__block--header">
+											<svg class="svg--contacts">
+												<use xlink:href="#point"></use>
+											</svg>
+										</div>
+
+										<p class="link__text">Пр.Соборный 150</p>
+									</a>
+
+								</div>
+
+
+								<div class="contacts__social">
+									<h4 class="contacts__social__title">Соц.сети</h4>
+
+									<div class="contacts__social__block">
+
+										<a href="#" class="contacts__social__link">
+											<img src="img/contacts/instagram.png" alt="Instagram"
+												class="contacts__social__img img">
+										</a>
+
+										<a href="#" class="contacts__social__link">
+											<img src="img/contacts/twitter.png" alt="Twitter"
+												class="contacts__social__img img">
+										</a>
+
+										<a href="#" class="contacts__social__link">
+											<img src="img/contacts/facebook.png" alt="Facebook"
+												class="contacts__social__img img">
+										</a>
+
+										<a href="#" class="contacts__social__link">
+											<img src="img/contacts/vk.png" alt="VK" class="contacts__social__img img">
+										</a>
+
+										<a href="#" class="contacts__social__link">
+											<img src="img/contacts/google.png" alt="Google"
+												class="contacts__social__img img">
+										</a>
+
+									</div>
+
+								</div>
+
+							</div>
+							<!--/.contacts__content-->
+
+							<div class="contacts__map">
+								<div class="contacts__map__absolute"><img src="img/contacts/waiter.png" alt="Chef"
+										class="img"></div>
+								<iframe
+									src="https://www.google.com/maps/d/u/0/embed?mid=1aepLQquGift5brXIjW-2dOUXtKtr0XW0">
+								</iframe>
+							</div>
+
+						</div>
+						<!--/.contacts__inner-->
+
+					</div>
+					<!--/.contacts-->
+
+				</div>
+				<!--/.footer__inner-->
+			</div>
+			<!--/.container-->
+
+
+			<div class="section__absolute section__absolute--top"></div>
+			<!--/.section__absolute-->
+
+		</div>
+		<!--/.section__bg-->
+	</footer>
 
 	<!-- JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>

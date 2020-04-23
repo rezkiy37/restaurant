@@ -99,8 +99,30 @@ jQuery(document).ready(function () {
 
     });
 
+    // map height
+    contactsHeight = $('.contacts__inner').height();
+
+    console.log(contactsHeight);
+
+    $('.contacts__map').css({ 'height': contactsHeight });
+
+    // contacts form input wrapper
+    if (width <= 450) {
+        console.log(width);
+
+        let $input = $('.footer__form__input--wrap');
+
+        $input.wrapAll("<div class='footer__form__input__wrapper'></div>");
+
+        $('.contacts__map').css({ 'height': 500 });
+    }
 
 
+
+
+    $(window).resize(function () {
+        newWidth = $(window).width();
+    });
 
 
 

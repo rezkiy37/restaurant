@@ -187,6 +187,7 @@ jQuery(document).ready(function () {
 
                     slidesToShow: 3,
                     slidesToScroll: 2,
+                    appendArrows: $('.gallery__controle'),
                 }
             },
 
@@ -196,6 +197,7 @@ jQuery(document).ready(function () {
 
                     slidesToShow: 2,
                     slidesToScroll: 2,
+                    appendArrows: $('.gallery__controle'),
                 }
             },
 
@@ -204,6 +206,7 @@ jQuery(document).ready(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    appendArrows: $('.gallery__controle'),
                 }
             },
         ],
