@@ -92,6 +92,9 @@ jQuery(document).ready(function () {
 
                 console.log(btn_data_modal_btn);
 
+                $('.modal__booking').hide();
+                $('.modal__feedback').show();
+
                 $('.modal').addClass('open');
                 $bg.show();
 
@@ -103,6 +106,31 @@ jQuery(document).ready(function () {
 
                 setTimeout(function () {
                     $('.modal__feedback').css({ "transform": "scale(1)" });
+                }, 300);
+
+                break;
+
+            case "#modal_booking":
+                event.preventDefault();
+
+                console.log(btn_data_modal_btn);
+
+                $('.modal__feedback').hide();
+                $('.modal__booking').show();
+
+                $('.modal__booking').wrap("<div class='modal__booking__wrapper'></div>");
+
+                $('.modal').addClass('open');
+                $bg.show();
+
+                $body.addClass('no-scroll');
+
+                setTimeout(function () {
+                    $('.modal').css({ "opacity": "1" });
+                }, 200);
+
+                setTimeout(function () {
+                    $('.modal__booking').css({ "transform": "scale(1)" });
                 }, 300);
 
                 break;
@@ -149,6 +177,7 @@ jQuery(document).ready(function () {
 
         setTimeout(function () {
             $('.modal__feedback').css({ "transform": "scale(0)" });
+            $('.modal__booking').css({ "transform": "scale(0)" });
         }, 200);
 
         setTimeout(function () {
@@ -175,9 +204,23 @@ jQuery(document).ready(function () {
         let elementId = $(this).data("anchor");
         let elementOffset = $(elementId).offset().top;
 
-        $("html, body").animate({
-            scrollTop: elementOffset - 100
-        }, 700);
+        console.log(bodyWidth);
+
+
+        if (bodyWidth >= 758) {
+            $("html, body").animate({
+                scrollTop: elementOffset - 100
+            }, 700);
+        }
+        else {
+            $burger.removeClass('active');
+            $nav.removeClass('active');
+            $body.removeClass('no-scroll');
+
+            $("html, body").animate({
+                scrollTop: elementOffset - 100
+            }, 700);
+        }
     });
 
 

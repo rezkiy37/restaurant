@@ -54,7 +54,6 @@
         padding: 80px 100px;
 
         display: flex;
-        flex: 0 1 1330px;
         justify-content: left;
         align-items: center;
         flex-wrap: wrap;
@@ -152,6 +151,185 @@
                 &:nth-child(3) {
                     height: auto;
 
+                    margin-bottom: 0;
+                    padding: 1.5em 6em !important;
+    
+                    flex: 0 1 338px;
+    
+                    color: @white;
+                    font-size: 14px;
+                    text-align: center;
+    
+                    background-color: @orange;
+    
+                    animation: btn-pulse 2s ease-out;
+                    animation-iteration-count: infinite;
+    
+                    @media @l {
+                        padding: 1.5em 5em !important;
+    
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__booking {     
+        width: 100%;
+
+        margin: 0 auto;
+        padding: 80px 100px;
+
+        display: flex;
+        flex: 0 1 1330px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        border-radius: 2.3em;
+
+        transform: scale(0);
+
+        transition: transform .2s linear; 
+
+        background-color: @white;
+
+        @media @intermediate {
+            padding: 70px 30px;
+        }
+
+        @media @medium {
+            padding: 60px 20px;
+        }
+
+        @media @l {
+            padding: 20px 15px;
+        }
+
+        &__wrapper {
+            max-width: 1330px;
+
+            display: flex;
+
+        }
+
+        &__form {
+            width: 100%;
+
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            &__line {
+                width: 100%;
+
+                margin-bottom: 40px;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @media @tablet {
+                    margin-bottom: 30px;
+                }
+
+                @media @l {
+                    flex-wrap: wrap;
+                }
+
+                &:first-child {
+                    & input {
+                        max-width: 500px;
+
+                        flex: 0 1 500px;
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    & input {
+                        max-width: 318px; 
+
+                        flex: 0 1 318px;
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+
+                        @media @l {
+                            max-width: 390px;
+                            flex: 0 1 390px;
+                        }
+                    }
+                
+                }
+            }
+
+            &__input {
+                height: 90px;
+
+                margin-left: 40px;
+                padding-left: 30px;
+
+                display: flex;
+
+                .fs(@fcb, inherit, 24px, 700);
+
+                border-radius: 2.3em;
+
+                background-color: @gray;
+
+                @media @laptop {
+                    font-size: 18px;
+                }
+
+                @media @medium {
+                    margin-left: 10px;
+
+                    font-size: 16px;
+                }
+
+                @media @l {
+                    font-size: 14px;
+                }
+
+                &:focus {
+                    outline: 0;
+                }
+
+                &::placeholder {
+                    color: @fcb;
+                }
+
+                @media @l {
+                    margin-left: 0;
+                }
+
+                &--textarea {
+                    width: 100%;
+                    height: 230px;
+
+                    margin-left: 0;
+                    margin-bottom: 70px;
+                    padding-top: 20px;
+
+                    @media @laptop {
+                        margin-bottom: 60px;
+                    }
+
+                    @media @tablet {
+                        margin-bottom: 40px;
+                    }
+                }
+
+                &.btn {
+                    height: auto;
+
+                    margin-left: 0;
                     margin-bottom: 0;
                     padding: 1.5em 6em !important;
     
