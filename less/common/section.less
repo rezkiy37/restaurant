@@ -1,0 +1,80 @@
+// main: ../common.less
+
+body {
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+    padding: 0;
+
+    color: @fcb;
+    font-family: Gilroy, Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+
+    position: relative;
+
+    background-color: @gray;
+}
+
+.sprite {
+    display: none;
+}
+
+.section {
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+    padding: 0;
+
+    position: relative;
+
+    &__bg {
+        width: 100%;
+        height: auto;
+
+        position: relative;
+
+        background-color: @gray;
+
+        
+        & .section__absolute {
+            width: 5000px;
+            height: 150px;
+
+            position: absolute;  
+            left: 0;
+            z-index: 1;
+
+            background-repeat: repeat-x;
+
+            &--top {
+                top: -150px;
+
+                background-image: url('img/about/above.png');
+            }
+
+            &--bottom {
+                bottom: -150px;
+
+                background-image: url('img/about/below.png');
+            }
+        }
+    }
+}
+
+.container {
+    max-width: 1580px;
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+    padding: 0 25px;
+
+    position: relative;
+
+    @media @medium {
+        padding: 0 15px;
+    }
+}

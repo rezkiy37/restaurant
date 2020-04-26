@@ -1804,7 +1804,7 @@
 				</div>
 				<!--/.feedback__slider__wrapper-->
 
-				<button class="btn btn--feedback"><span>ОСТАВИТЬ ОТЗЫВ</span></button>
+				<button class="btn btn--feedback" data-modal_btn="#modal_feedback"><span>ОСТАВИТЬ ОТЗЫВ</span></button>
 
 				<div class="feedback__controle"></div>
 
@@ -1836,12 +1836,12 @@
 									placeholder="Время">
 							</div>
 
-							<input type="submit" class="footer__form__input footer__form__input btn btn--booking"
+							<input type="submit" class="footer__form__input btn btn--booking"
 								value="забронировать стол">
 						</form>
 					</div>
 
-					<div class="contacts">
+					<div class="contacts" id="contacts">
 
 						<div class="contacts__inner">
 
@@ -1943,8 +1943,34 @@
 		<!--/.section__bg-->
 	</footer>
 
+	<!-- Modals -->
+	<div class="modal section" id="modals">
+		<div class="modal__window">
+
+			<div class="modal__feedback" id="modal_feedback">
+
+				<h2 class="modal__title">Оставьте отзыв</h2>
+
+				<form action="#" class="modal__feedback__form">
+
+					<input type="text" class="modal__feedback__form__input" placeholder="Имя">
+
+					<textarea class="modal__feedback__form__input"
+						placeholder="Недавно постетила ресторан Villa Marta и хочу сказать..." wrap="soft"></textarea>
+
+					<input type="submit" class="modal__feedback__form__input btn btn--booking" value="ОСТАВИТЬ отзыв">
+
+				</form>
+			</div>
+			<!--/.modal__feedback-->
+
+		</div>
+		<!--/.modal__window-->
+	</div>
+	<!--/.modal-->
+
 	<!-- JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+	<script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script async src="js.js"></script>
 	<script async src="js/sliders.js"></script>

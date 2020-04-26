@@ -49,6 +49,7 @@ jQuery(document).ready(function () {
         let
             btn_data_btn = $(this).data('btn');
         btn_data_anchor = $(this).data('anchor');
+        btn_data_modal_btn = $(this).data('modal_btn');
 
         switch (btn_data_btn) {
             case "no-click":
@@ -84,6 +85,28 @@ jQuery(document).ready(function () {
             default:
                 console.log('It is not an anchor link');
         }
+
+        switch (btn_data_modal_btn) {
+            case "#modal_feedback":
+                event.preventDefault();
+
+                console.log(btn_data_modal_btn);
+
+                $('.modal').addClass('open');
+                $bg.show();
+
+                $body.addClass('no-scroll');
+
+                setTimeout(function () {
+                    $('.modal').css({ "opacity": "1" });
+                }, 200);
+
+                setTimeout(function () {
+                    $('.modal__feedback').css({ "transform": "scale(1)" });
+                }, 300);
+
+                break;
+        }
     });
 
     // menu switcher class
@@ -117,12 +140,50 @@ jQuery(document).ready(function () {
         $('.contacts__map').css({ 'height': 500 });
     }
 
+    // Click on BG 
+    let $bg = $('.modal');
 
+    $bg.on("click", function () {
 
+        $body.removeClass('no-scroll');
 
-    $(window).resize(function () {
-        newWidth = $(window).width();
+        setTimeout(function () {
+            $('.modal__feedback').css({ "transform": "scale(0)" });
+        }, 200);
+
+        setTimeout(function () {
+            $bg.css({
+                'opacity': '0'
+            });
+        }, 300);
+
+        setTimeout(function () {
+            $bg.hide();
+            $bg.removeClass('open');
+        }, 400);
+
     });
+
+    $(".modal__window").on("click", function (event) {
+        event.stopPropagation();
+    });
+
+    // scroll
+    $("[data-anchor]").on("click", function (event) {
+        event.preventDefault();
+
+        let elementId = $(this).data("anchor");
+        let elementOffset = $(elementId).offset().top;
+
+        $("html, body").animate({
+            scrollTop: elementOffset - 100
+        }, 700);
+    });
+
+
+    // $(window).resize(function () {
+    //     newWidth = $(window).width();
+    // });
 
 
 
@@ -189,6 +250,34 @@ jQuery(document).ready(function () {
     //             $('.menu__slider').slick('setPosition');
     //         }
     //     });
+
+    // });
+
+    // modal click bg
+    // var modalArray = ["modal_feedback"];
+    // var modalVisable;
+
+    // if ($('.modal').is(':visible')) {
+    //     modalVisable = true;
+    // }
+    // else {
+    //     modalVisable = false;
+    // }
+
+    // console.log(modalVisable);
+
+
+    // window.addEventListener("mouseup", function (event) {
+
+    //     console.log(event.target.className);
+
+    //     if (event.target != modalArray[0] && modalVisable == 1) {
+
+    //         $('.modal__feedback').hide();
+    //         $('.modal').hide();
+
+    //         console.log(event.target.className);
+    //     }
 
     // });
 

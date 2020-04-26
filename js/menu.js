@@ -1,11 +1,7 @@
 window.onload = () => {
-    // menu
 
-    let
-        menu = document.getElementsByClassName('menu__slider');
-    //menu_first = document.querySelector('.menu__slider');
-    controle = document.getElementsByClassName('menu__controle');
-    //controle_first = document.querySelector('.menu__controle');
+    let menu = document.getElementsByClassName('menu__slider'),
+        controle = document.getElementsByClassName('menu__controle');
 
 
     console.log(menu);
@@ -21,15 +17,6 @@ window.onload = () => {
             controle[i].style.display = 'none';
         }
     }
-
-    // for (let i = 0; i < menu.length; i++) {
-    //     menu[i].style.display = 'none';
-    //     controle[i].style.display = 'none';
-    // }
-
-    // menu_first.style.display = 'block';
-    // controle_first.style.display = 'block';
-
 
     document.querySelector('.menu__nav').addEventListener('click', linkClick);
 
@@ -49,8 +36,6 @@ window.onload = () => {
                     controle[i].style.display = 'block';
 
                     $('.menu__slider').slick('setPosition');
-                    // $('.section__slider2').slick('setPosition');
-                    // $('.section__slider3').slick('setPosition');
                 }
                 else {
                     menu[i].style.display = 'none';
