@@ -655,6 +655,9 @@ body {
 .header__burger {
   display: none;
 }
+.header__burger:focus {
+  outline: 0;
+}
 @media (max-width: 767px) {
   .header__burger {
     width: 25px;
@@ -758,6 +761,9 @@ body {
 .header__nav__link:hover {
   color: #ffcdb7;
 }
+.header__nav__link:focus {
+  outline: 0;
+}
 .header__nav__link:active {
   color: #ffbc9e;
 }
@@ -834,6 +840,9 @@ body {
 }
 .header__list li {
   margin-left: 60px;
+}
+.header__list li:focus {
+  outline: 0;
 }
 .header__list li:first-child {
   margin-left: 0;
